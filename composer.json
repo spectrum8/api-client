@@ -1,0 +1,41 @@
+{
+    "name": "tk-world/api-client",
+    "description": "TK-World API-Client for partners",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Martin Wegen",
+            "email": "m.wegen@spectrum8.de"
+        },
+        {
+            "name": "Jan-Frederik Michels",
+            "email": "jf.michels@spectrum8.de"
+        },
+        {
+            "name": "Mathias Berg",
+            "email": "m.berg@spectrum8.de"
+        },
+        {
+            "name": "Rudolf Block",
+            "email": "r.block@spectrum8.de"
+        },
+        {
+            "name": "Andre Münstermann",
+            "email": "a.muenstermann@spectrum8.de"
+        },
+        {
+            "name": "Sascha Edelmann",
+            "email": "s.edelmann@spectrum8.de"
+        },
+        {
+            "name": "Lukas Schnitzmeier",
+            "email": "l.schnitzmeier@spectrum8.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Spectrum8\\": "src/"
+        }
+    }
+}
