@@ -35,7 +35,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Spectrum8\ApiClient\\": "src/"
+            "Spectrum8\\ApiClient\\": "src/"
         }
     }
 }
