@@ -1,5 +1,5 @@
 {
-    "name": "spectrum8/api-client",
+    "name": "tk-world/api-client",
     "description": "TK-World API-Client for partners",
     "type": "project",
     "authors": [
@@ -35,7 +35,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Spectrum8\\": "src/"
+            "Spectrum8\ApiClient\\": "src/"
         }
     }
 }
