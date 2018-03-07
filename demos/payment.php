@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$paymentService = new \Spectrum8\Service\PaymentService();
+$paymentService = new \Spectrum8\ApiClient\Service\PaymentService();
 $paymentService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',
@@ -11,7 +11,7 @@ $paymentService->initConnector(
 );
 try {
     var_dump($paymentService->getBicByIban('DE213546879213'));
-} catch (\Spectrum8\Exception\SpectrumException $exception) {
+} catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
 }

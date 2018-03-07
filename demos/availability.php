@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$availabilityService = new \Spectrum8\Service\AvailabilityService();
+$availabilityService = new \Spectrum8\ApiClient\Service\AvailabilityService();
 $availabilityService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',
@@ -24,7 +24,7 @@ try {
         ]
         )
     );
-} catch (\Spectrum8\Exception\SpectrumException $exception) {
+} catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
 }

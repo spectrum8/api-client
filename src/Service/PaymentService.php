@@ -1,12 +1,12 @@
 <?php
-namespace Spectrum8\Service;
+namespace Spectrum8\ApiClient\Service;
 
-use Spectrum8\Interfaces\Connector;
-use Spectrum8\Exception\SpectrumException;
+use Spectrum8\ApiClient\Interfaces\Connector;
+use Spectrum8\ApiClient\Exception\SpectrumException;
 
 /**
  * Class PaymentService
- * @package Spectrum8\Service
+ * @package Spectrum8\ApiClient\Service
  */
 class PaymentService extends BaseService
 {
@@ -16,9 +16,7 @@ class PaymentService extends BaseService
     protected $connector = null;
 
     /**
-     * @param string $provider [telekom, vodafone]
-     * @param string $segment
-     * @param array $customerData  keys: [street, housenumber, housenumber_affix, city, zipcode]
+     * @param string $iban
      * @return array|string|\stdClass|null
      * @throws SpectrumException
      */

@@ -59,7 +59,7 @@ $order = array (
 );
 
 
-$orderService = new \Spectrum8\Service\OrderService();
+$orderService = new \Spectrum8\ApiClient\Service\OrderService();
 $orderService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',
@@ -68,7 +68,7 @@ $orderService->initConnector(
 );
 try {
     var_dump($orderService->createOrder('telekom', 'festnetz', $order), $orderService->getConnector()->getErrors());
-} catch (\Spectrum8\Exception\SpectrumException $exception) {
+} catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
 }

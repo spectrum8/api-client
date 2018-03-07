@@ -1,9 +1,9 @@
 <?php
-namespace Spectrum8\Service;
+namespace Spectrum8\ApiClient\Service;
 
 /**
  * Class ApiService
- * @package Spectrum8\Service
+ * @package Spectrum8\ApiClient\Service
  */
 class ApiService extends BaseService
 {

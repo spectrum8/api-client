@@ -1,9 +1,9 @@
 <?php
-namespace Spectrum8\Exception;
+namespace Spectrum8\ApiClient\Exception;
 
 /**
  * Class SpectrumException
- * @package Spectrum8\Exception
+ * @package Spectrum8\ApiClient\Exception
  */
 class SpectrumException extends \Exception
 {

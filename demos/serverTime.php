@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$apiService = new \Spectrum8\Service\ApiService();
+$apiService = new \Spectrum8\ApiClient\Service\ApiService();
 $apiService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',

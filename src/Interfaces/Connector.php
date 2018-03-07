@@ -1,11 +1,11 @@
 <?php
-namespace Spectrum8\Interfaces;
+namespace Spectrum8\ApiClient\Interfaces;
 
-use Spectrum8\Exception\SpectrumException;
+use Spectrum8\ApiClient\Exception\SpectrumException;
 
 /**
  * Interface Connector
- * @package Spectrum8\Interfaces
+ * @package Spectrum8\ApiClient\Interfaces
  */
 interface Connector
 {

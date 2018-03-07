@@ -1,12 +1,12 @@
 <?php
-namespace Spectrum8\Service;
+namespace Spectrum8\ApiClient\Service;
 
-use Spectrum8\Connector\CurlConnector;
-use Spectrum8\Interfaces\Connector;
+use Spectrum8\ApiClient\Connector\CurlConnector;
+use Spectrum8\ApiClient\Interfaces\Connector;
 
 /**
  * Class BaseService
- * @package Spectrum8\Service
+ * @package Spectrum8\ApiClient\Service
  */
 class BaseService
 {

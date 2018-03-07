@@ -1,12 +1,12 @@
 <?php
-namespace Spectrum8\Service;
+namespace Spectrum8\ApiClient\Service;
 
-use Spectrum8\Exception\SpectrumException;
-use Spectrum8\Interfaces\Connector;
+use Spectrum8\ApiClient\Exception\SpectrumException;
+use Spectrum8\ApiClient\Interfaces\Connector;
 
 /**
  * Class OrderService
- * @package Spectrum8\Service
+ * @package Spectrum8\ApiClient\Service
  */
 class OrderService extends BaseService
 {
@@ -95,9 +95,7 @@ class OrderService extends BaseService
     }
 
     /**
-     * @param string $provider [telekom, congstar]
-     * @param string $segment  [festnetz, mobilfunk]
-     * @param array $data
+     * @param int $tkwNumber
      * @return array|string|\stdClass|null
      * @throws SpectrumException
      */

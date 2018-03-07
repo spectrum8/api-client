@@ -1,12 +1,12 @@
 <?php
-namespace Spectrum8\Connector;
+namespace Spectrum8\ApiClient\Connector;
 
-use Spectrum8\Exception\SpectrumException;
-use Spectrum8\Interfaces\Connector;
+use Spectrum8\ApiClient\Exception\SpectrumException;
+use Spectrum8\ApiClient\Interfaces\Connector;
 
 /**
  * Class CurlConnector
- * @package Spectrum8\Connector
+ * @package Spectrum8\ApiClient\Connector
  */
 class CurlConnector implements Connector
 {

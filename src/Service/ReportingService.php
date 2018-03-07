@@ -1,12 +1,12 @@
 <?php
-namespace Spectrum8\Service;
+namespace Spectrum8\ApiClient\Service;
 
-use Spectrum8\Interfaces\Connector;
-use Spectrum8\Exception\SpectrumException;
+use Spectrum8\ApiClient\Interfaces\Connector;
+use Spectrum8\ApiClient\Exception\SpectrumException;
 
 /**
  * Class ReportingService
- * @package Spectrum8\Service
+ * @package Spectrum8\ApiClient\Service
  */
 class ReportingService extends BaseService
 {
@@ -18,9 +18,9 @@ class ReportingService extends BaseService
     /**
      * @param string $from
      * @param string $to
-     * @param int $partnerId
      * @param bool $products
      * @param bool $productGroupName
+     * @param int $partnerId
      * @return array|string|\stdClass|null
      * @throws SpectrumException
      */

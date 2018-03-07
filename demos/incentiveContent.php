@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$contentService = new \Spectrum8\Service\ContentService();
+$contentService = new \Spectrum8\ApiClient\Service\ContentService();
 $contentService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',
@@ -11,7 +11,7 @@ $contentService->initConnector(
 );
 try {
     var_dump($contentService->getGroupContent([1,2,3], 111));
-} catch (\Spectrum8\Exception\SpectrumException $exception) {
+} catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
 }

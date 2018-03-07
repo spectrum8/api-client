@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$infoService = new \Spectrum8\Service\InfoService();
+$infoService = new \Spectrum8\ApiClient\Service\InfoService();
 $infoService->initConnector(
     [
         'email'     => 'YOUR_MAIL_ADDRESS',
@@ -11,7 +11,7 @@ $infoService->initConnector(
 );
 try {
     var_dump($infoService->getPortingNumbers('telekom', 'mobilfunk'));
-} catch (\Spectrum8\Exception\SpectrumException $exception) {
+} catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
 }
