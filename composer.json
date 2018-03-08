@@ -2,6 +2,7 @@
     "name": "tk-world/api-client",
     "description": "TK-World API-Client for partners",
     "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Martin Wegen",
