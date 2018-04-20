@@ -205,6 +205,8 @@ class CurlConnector implements Connector
         // set the curl options
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($this->curl, CURLOPT_CONNECTTIMEOUT, 0);
+        curl_setopt($this->curl, CURLOPT_TIMEOUT, 600);
     }
 
     /**
