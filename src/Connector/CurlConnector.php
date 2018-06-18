@@ -60,6 +60,8 @@ class CurlConnector implements Connector
      */
     private $requestByApi = [];
 
+    private $apiEnvironment = 'production';
+
     /**
      * @return string
      */
@@ -148,6 +150,41 @@ class CurlConnector implements Connector
     }
 
     /**
+     * Set Environment for request
+     * Possible:
+     * - production
+     * - prod
+     * - development
+     * - dev
+     *
+     * @param string $environment
+     */
+    public function setApiEnvironment($environment = 'production')
+    {
+        $possibleEnvironments = [
+            'production'    => 'production',
+            'prod'          => 'production',
+            'development'   => 'development',
+            'dev'           => 'development'
+        ];
+        if (!empty($possibleEnvironments[$environment])) {
+            $this->apiEnvironment = $possibleEnvironments[$environment];
+        } else {
+            throw new SpectrumException('Api environment "' . $environment . '"not allowed');
+        }
+    }
+
+    /**
+     * Returns request environment
+     *
+     * @return string
+     */
+    public function getApiEnvironment()
+    {
+        return $this->apiEnvironment;
+    }
+
+    /**
      * Reset Header to default (empty)
      */
     public function resetHeader()
@@ -221,9 +258,16 @@ class CurlConnector implements Connector
     {
         $this->initCurl();
 
+        // Check data and add api_environment
         if (!is_string($data)) {
+            $data['api_environment'] = $this->getApiEnvironment();
+            $data = json_encode($data);
+        } else {
+            $data = json_decode($data, true);
+            $data['api_environment'] = $this->getApiEnvironment();
             $data = json_encode($data);
         }
+
         if (empty($method)) {
             throw new SpectrumException('Method has to be set');
         }
