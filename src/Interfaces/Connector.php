@@ -141,4 +141,23 @@ interface Connector
      * @param array $data
      */
     public function setRequestByApi(array $data);
+
+    /**
+     * Set Environment for request
+     * Possible:
+     * - production
+     * - prod
+     * - development
+     * - dev
+     *
+     * @param string $environment
+     */
+    public function setApiEnvironment($environment = 'production');
+
+    /**
+     * Returns request environment
+     *
+     * @return string
+     */
+    public function getApiEnvironment();
 }
