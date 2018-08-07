@@ -159,7 +159,7 @@ class CurlConnector implements Connector
      *
      * @param string $environment
      */
-    public function setApiEnvironment($environment = 'production')
+    public function setApiEnvironment($environment = 'development')
     {
         $possibleEnvironments = [
             'production'    => 'production',
