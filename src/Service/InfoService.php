@@ -165,4 +165,32 @@ class InfoService extends BaseService
         }
         return null;
     }
+
+    /**
+     * @param int|array|null $partnerTarget
+     * @return array|string|\stdClass|null
+     */
+    public function getMobileDevices($partnerTarget = null)
+    {
+        if (!is_array($partnerTarget) && !is_null($partnerTarget)) {
+            $partnerTarget = [(int) $partnerTarget];
+        } elseif (is_array($partnerTarget)) {
+            foreach ($partnerTarget as &$item) {
+                $item = (int) $item;
+            }
+        } else {
+            $partnerTarget = null;
+        }
+
+        if ($this->connector instanceof Connector) {
+            return $this->connector->sendRequest(
+                [
+                    'partner_target' => $partnerTarget
+                ],
+                'infos',
+                'mobiledevices'
+            );
+        }
+        return null;
+    }
 }
