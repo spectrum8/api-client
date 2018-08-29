@@ -193,4 +193,19 @@ class InfoService extends BaseService
         }
         return null;
     }
+
+    /**
+     * @return array|string|\stdClass|null
+     */
+    public function getMobileTariffs()
+    {
+        if ($this->connector instanceof Connector) {
+            return $this->connector->sendRequest(
+                [],
+                'infos',
+                'mobiletariffs'
+            );
+        }
+        return null;
+    }
 }
