@@ -11,7 +11,7 @@ $infoService->initConnector(
 );
 
 try {
-    var_dump($infoService->getMobileTariffs());
+    var_dump($infoService->getMobileProviders());
 } catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;
