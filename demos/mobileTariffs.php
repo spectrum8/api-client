@@ -11,7 +11,10 @@ $infoService->initConnector(
 );
 
 try {
+    // All mobile tariffs
     var_dump($infoService->getMobileTariffs());
+    // For example: specific Telekom mobile tariffs
+    var_dump($infoService->getMobileTariffs('Telekom Mobile'));
 } catch (\Spectrum8\ApiClient\Exception\SpectrumException $exception) {
     echo $exception->getMessage();
     exit;

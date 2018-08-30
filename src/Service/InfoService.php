@@ -195,13 +195,18 @@ class InfoService extends BaseService
     }
 
     /**
+     * @param null|string $provider
      * @return array|string|\stdClass|null
      */
-    public function getMobileTariffs()
+    public function getMobileTariffs($provider = null)
     {
+        $parameters = [];
+        if (is_string($provider) && strlen($provider) > 0) {
+            $parameters['provider'] = $provider;
+        }
         if ($this->connector instanceof Connector) {
             return $this->connector->sendRequest(
-                [],
+                $parameters,
                 'infos',
                 'mobiletariffs'
             );
