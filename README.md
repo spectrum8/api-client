@@ -1,2 +1,2 @@
 # api-client
-API-Client für die TK-World AG / spectrum8 API
+API-Client für die spectrum8 API
